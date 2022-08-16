@@ -7,9 +7,9 @@ import map from "../assets/map.jpg"
 
 
 export default function App() {
-return (
+return ( 
 <ScrollView style={styles.container}>
-    <Image style ={styles.mainimage} source ={sponet}/>
+    <Image style ={styles.mainimage} resizeMode={"contain"} source ={sponet}/>
 <ScrollView style ={styles. middlecontainer} horizontal = {true}>
 <TouchableOpacity style ={styles.middlebutton}><Text style ={styles.middletext}>오늘의 배드민중</Text></TouchableOpacity>
 <TouchableOpacity style ={styles.middlebutton}><Text style ={styles.middletext}>클럽/동아리찾기</Text></TouchableOpacity> 
@@ -30,7 +30,6 @@ container:{
     
 },
 mainimage:{
-    
     alignContent:"center",
     height: "75%",
     width:"100%",
@@ -40,6 +39,7 @@ mainimage:{
 middlecontainer:{
     borderWidth:1,
     height:10,
+    width:10,
     
 
 },
