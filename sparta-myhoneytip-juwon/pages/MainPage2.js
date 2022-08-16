@@ -28,18 +28,16 @@ style={styles.mainimage}/>
 <View style={styles.cardcontainer}>
 <Image
 source={guksen}
-resizeMode={"stretch"}
+resizeMode={"contain"}
 style={styles.cardimage}/>
-<Text style ={styles.cardtext}>수지 체육공원 배드민턴장<Text style ={styles.cardtext2}>                                  경기 용인시 수지고 신수로 683번길 31</Text>
-<Text style ={styles.cardtext3}>                                           1회/2시간 1500원, 월 2시간 25000원</Text></Text>
-
+<Text style ={styles.cardtext}>수지 체육공원 배드민턴장</Text>
 </View> 
 
 
 <View style={styles.cardcontainer}>
 <Image
 source={metan}
-resizeMode={"stretch"}
+resizeMode={"contain"}
 style={styles.cardimage}/>
 <Text style ={styles.cardtext}>수지 체육공원 배드민턴장</Text>
 </View>
@@ -47,7 +45,7 @@ style={styles.cardimage}/>
 <View style={styles.cardcontainer}>
 <Image
 source={map}
-resizeMode={"stretch"}
+resizeMode={"contain"}
 style={styles.cardimage}/>
 <Text style ={styles.cardtext}>수지 체육공원 배드민턴장</Text>
 </View> 
@@ -106,7 +104,6 @@ mainimage:{
 
 card: {
     height: 500,
-    backgroundColor: "#fff",
     borderColor:'#000',
     borderWidth:1, //태두리 지우기
     borderRadius:10,
@@ -121,23 +118,16 @@ card: {
         },
         cardimage:{
             flex:2,
+            marginTop:5,
             alignContent:"stretch",
             height: "100%",
             width:"100%",
-            borderRadius:10,
 },
 cardtext: {
     flex:1,
     fontSize: 20,
-    margin:15,
-},
-cardtext2:{
     
-    fontSize: 10,
 },
-cardtext3:{
-    fontSize: 18
-}
 
 
     
