@@ -9,13 +9,14 @@ import map from "../assets/map.jpg"
 export default function App() {
 return (
 <ScrollView style={styles.container}>
-    <image style ={styles.mainimage} source ={sponet}/>
-<ScrollView> style ={styles. middlecontainer} horizontal = {true}
-<TouchableOpacity style ={styles.middlebutton}> <Text style ={styles.middletext}>오늘의 배드민턴 </Text></TouchableOpacity>
-<TouchableOpacity style ={styles.middlebutton}> <Text style ={styles.middletext}>클럽/동아리찾기 </Text></TouchableOpacity> 
+    <Image style ={styles.mainimage} source ={sponet}/>
+<ScrollView style ={styles. middlecontainer} horizontal = {true}>
+<TouchableOpacity style ={styles.middlebutton}><Text style ={styles.middletext}>오늘의 배드민중</Text></TouchableOpacity>
+<TouchableOpacity style ={styles.middlebutton}><Text style ={styles.middletext}>클럽/동아리찾기</Text></TouchableOpacity> 
 </ScrollView>
-<ScrollView style ={styles. cardcontainer}><Text style = {styles.middlemaintext} >용인시, 배드민턴장</Text>
-<View style = {styles.card}><Image style ={styles.cardimage} source ={guksen}></Image><Text style ={styles.cardtext}>국민체육센터</Text> </View>
+<ScrollView style ={styles. cardcontainer}><Text style = {styles.middlemaintext}>용인시/배드민턴장</Text>
+<View style = {styles.card}><Image style ={styles.cardimage} source ={guksen}/><Text style ={styles.cardtext}>국민체육센터</Text>
+</View>
 </ScrollView>
 
 
@@ -26,13 +27,20 @@ return (
 const styles = StyleSheet.create({
 container:{
     backgroundColor: '#ECECEC',
+    
 },
 mainimage:{
-    justifyContent: 'space-between',
+    
+    alignContent:"center",
+    height: "75%",
+    width:"100%",
+    resizeMode: 'stretch',
+    borderRadius:8,
 },
 middlecontainer:{
     borderWidth:1,
     height:10,
+    
 
 },
 
@@ -42,15 +50,15 @@ middlebutton:{
     backgroundColor: "yellow",
 },
 middletext: {
-    fontSize:10,
-    padding:10,
+    fontSize:1,
+    padding:1,
 },
 cardcontainer:{
     borderWidth:1,
 
 },
 middlemaintext:{
-    fontsize:10,
+    fontsize:1,
 
 },
 card:{
