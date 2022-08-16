@@ -21,7 +21,7 @@ style={styles.imageStyle1}/><Text>사진속에 글자 넣는법 알아야함</Te
           onPress={() => Alert.alert('오늘의 배드민턴 페이지로 연결')}
         />
         <Button
-          title="클럽/동아리 찾기"
+          title="클럽/동아리 찾아보기 찾기"
           onPress={() => Alert.alert('동아리 찾기 페이지로 연결')}
         />
       </View>
