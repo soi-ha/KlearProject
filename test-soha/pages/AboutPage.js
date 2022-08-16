@@ -1,69 +1,82 @@
-import React from 'react'
-import {View,Text,StyleSheet,Image, TouchableOpacity,} from 'react-native'
-export default function AboutPage(){
-const aboutImage = "https://firebasestorage.googleapis.com/v0/b/sparta-image.appspot.com/o/lecture%2FaboutImage.png?a"
+import React from 'react';
+import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity, Alert ,Button,} from 'react-native';
+import guksen from "../assets/guksen.jpg"
+import metan from "../assets/metan.png"
+import sponet from "../assets/sponet.jpg" 
+import map from "../assets/map.jpg" 
+
+
+export default function App() {
 return (
-<View style={styles.container}>
-<Text style={styles.title}>HI! 스파르타코딩 앱개발 반에 오신것을 환영합니다</Text>
-<View style={styles.textContainer}>
-<Image style={styles.aboutImage} source={{uri:aboutImage}} resizeMode={"cover"}/>
-<Text style={styles.desc01}>많은 내용을 간결하게 담아내려 노력했습니다!</Text>
-<Text style={styles.desc02}>꼭 완주 하셔서 꼭 여러분것으로 만들어가시길 바랍니다</Text>
-<TouchableOpacity style={styles.button}>
-<Text style={styles.buttonText}>여러분의 인스타계정</Text>
-</TouchableOpacity>
+<ScrollView style={styles.container}>
+    <Image style ={styles.mainimage} source ={sponet}/>
+<ScrollView style ={styles. middlecontainer} horizontal = {true}>
+<TouchableOpacity style ={styles.middlebutton}><Text style ={styles.middletext}>오늘의 배드민중</Text></TouchableOpacity>
+<TouchableOpacity style ={styles.middlebutton}><Text style ={styles.middletext}>클럽/동아리찾기</Text></TouchableOpacity> 
+</ScrollView>
+<ScrollView style ={styles. cardcontainer}><Text style = {styles.middlemaintext}>용인시/배드민턴장</Text>
+<View style = {styles.card}><Image style ={styles.cardimage} source ={guksen}/><Text style ={styles.cardtext}>국민체육센터</Text>
 </View>
-</View>)
+</ScrollView>
+
+
+
+</ScrollView>
+);
 }
 const styles = StyleSheet.create({
-container: {
-flex:1,
-backgroundColor:"#1F266A",
-alignItems:"center"
+container:{
+    backgroundColor: '#ECECEC',
+    
 },
-title: {
-fontSize:30,
-fontWeight:"700",
-color:"#fff",
-paddingLeft:30,
-paddingTop:100,
-paddingRight:30
+mainimage:{
+    
+    alignContent:"center",
+    height: "75%",
+    width:"100%",
+    resizeMode: 'stretch',
+    borderRadius:8,
 },
-textContainer: {
-width:300,
-height:500,
-backgroundColor:"#fff",
-marginTop:50,
-borderRadius:30,
-justifyContent:"center",
-alignItems:"center"
+middlecontainer:{
+    borderWidth:1,
+    height:10,
+    
+
 },
-aboutImage:{
-width:150,
-height:150,
-borderRadius:30
+
+middlebutton:{
+    width:10,
+    height:10,
+    backgroundColor: "yellow",
 },
-desc01: {
-textAlign:"center",
-fontSize:20,
-fontWeight:"700",
-paddingLeft:22,
-paddingRight:22
+middletext: {
+    fontSize:1,
+    padding:1,
 },
-desc02: {
-textAlign:"center",
-fontSize:15,
-fontWeight:"700",
-padding:22
+cardcontainer:{
+    borderWidth:1,
+
 },
-button:{
-backgroundColor:"orange",
-padding:20,
-borderRadius:15
+middlemaintext:{
+    fontsize:1,
+
 },
-buttonText: {
-color:"#fff",
-fontSize:15,
-fontWeight:"700"
+card:{
+    borderWidth:1,
+    height:10,
+    width:10,
+},
+cardimage:{
+    flex:1,
+
+
+},
+cardtext:{
+   flex:2,
 }
-})
+
+
+
+
+
+});
