@@ -53,18 +53,18 @@ return 구문 안에서는 {슬래시 + * 방식으로 주석
 <Image style={styles.mainImage} source={sponet}/>
 <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
 <TouchableOpacity style={styles.middleButtonAll} onPress={()=>{category('오늘의 배드민턴')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
-<TouchableOpacity style={styles.middleButton01} onPress={()=>{category('생활')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
-<TouchableOpacity style={styles.middleButton02} onPress={()=>{category('재테크')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
-<TouchableOpacity style={styles.middleButton03} onPress={()=>{category('반려견')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
-<TouchableOpacity style={styles.middleButton04} onPress={()=>{category('꿀팁 찜')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
+<TouchableOpacity style={styles.middleButton01} onPress={()=>{category('클럽/동아리찾기')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
+
 </ScrollView>
 <View style={styles.cardContainer}>
 {/* 하나의 카드 영역을 나타내는 View */}
 {
 cateState.map((content,i)=>{
 return (<Card content={content} key={i}/>)
+
 })
 }
+
 </View>
 </ScrollView>
 );
@@ -91,11 +91,11 @@ paddingRight:20
 },
 mainImage: {
 //컨텐츠의 넓이 값
-width:'90%',
+width:'100%',
 //컨텐츠의 높이 값
 height:200,
 //컨텐츠의 모서리 구부리기
-borderRadius:10,
+borderRadius:0,
 marginTop:20,
 //컨텐츠 자체가 앱에서 어떤 곳에 위치시킬지 결정(정렬기능)
 //각 속성의 값들은 공식문서에 고대로~ 나와 있음
@@ -130,26 +130,10 @@ height:50,
 padding:15,
 backgroundColor:"#fe8d6f",
 borderRadius:15,
-margin:7
-},
-middleButton03: {
-width:100,
-height:50,
-padding:15,
-backgroundColor:"#9adbc5",
-borderRadius:15,
-margin:7
-},
-middleButton04: {
-width:100,
-height:50,
-padding:15,
-backgroundColor:"#f886a8",
-borderRadius:15,
-margin:7
+margin:7,
 },
 middleButtonText: {
-color:"#fff",
+fontcolor:"black",
 fontWeight:"700",
 //텍스트의 현재 위치에서의 정렬
 textAlign:"center"

@@ -29,7 +29,7 @@ height:100,
 borderRadius:10,
 },
 cardText: {
-flex:2,
+flex:1,
 flexDirection:"column",
 marginLeft:10,
 },
