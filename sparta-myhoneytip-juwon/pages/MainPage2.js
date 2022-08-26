@@ -16,7 +16,7 @@ resizeMode={"contain"}
 style={styles.mainimage}/>
 
 <View style={styles.middlecontainer}>
-<TouchableOpacity style ={styles.middlebutton}><Text style ={styles.middletext}>오늘의 배드민중</Text></TouchableOpacity>
+<TouchableOpacity style ={styles.middlebutton}><Text style ={styles.middletext}>오늘의 배드민턴</Text></TouchableOpacity>
 <TouchableOpacity style ={styles.middlebutton}><Text style ={styles.middletext}>클럽/동아리찾기</Text></TouchableOpacity> 
       </View>
 

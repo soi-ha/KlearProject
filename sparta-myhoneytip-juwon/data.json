@@ -1,0 +1,79 @@
+
+{
+   "tip":[
+   {
+   "idx":0,
+   "category":"오늘의 배드민턴",
+   "title":" 매탄 다목적 체육관 ",
+   "image":"https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA1MjNfMjg4%2FMDAxNTI3MDc3NTE1MDI2.QdYaez9VCWPFKHKrkWMjN8Pf2QtzWrTdMm5RB6woxn0g.1tw0Skf6OlhdO3B1TBPPW65Djd706zCcuc_1kgI4UOUg.JPEG.pdk4466%2FIMG_1193.jpg&type=sc960_832",
+   "desc":"평일 06:00-23:00 / 토요일 06:00-22:00 / 공휴일, 명절 휴무",
+   "date":"경기 수원시 영통구 매탄로 185"
+   },
+   {
+   "idx":1,
+   "category":"오늘의 배드민턴",
+   "title":" 퍼시픽 배드민턴",
+   "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAyMjhfMTk2%2FMDAxNTgyODk5OTExMDAw.SrzUC2SE9ZFTR6CuAlZCjH5chgbRU8_y8xEFADBF70kg.Vvs7wJO5VvqI7fInPhm9an8NxUXxxYaTn2liZ_xNu4Ag.JPEG.winners9716%2F1582899909297.jpg&type=sc960_832",
+   "desc":"06:00-24:00 연중무휴",
+   "date":"경기 수원시 팔달구 효원로 288 10층"
+   },
+   {
+   "idx":2,
+   "category":"오늘의 배드민턴",
+   "title":"88배드민턴클럽",
+   "image": "https://firebasestorage.googleapis.com/v0/b/sparta-image.appspot.com/o/lecture%2Fshirt.png?alt=media&to",
+   "desc":"최대 수용 인원 24 / 주민등록상 수원시 주민만 이용 가능 / 06:00-21:00",
+   "date":"경기도 수원시 권선구 권선로 669번길 24-23"
+   },
+  
+   {
+   "idx":3,
+   "category":"오늘의 배드민턴",
+   "title":"권선중앙실내체육관",
+   "image": "https://firebasestorage.googleapis.com/v0/b/sparta-image.appspot.com/o/lecture%2Fmoney1.png?alt=media&to",
+   "desc":"‘평일, 토요일 06:00-22:00 / 일요일 휴무",
+   "date":"경기 수원시 권선구 권중로 69"
+   },
+   {
+   "idx":4,
+   "category":"오늘의 배드민턴",
+   "title":"광교웰빙국민체육센터",
+   "image": "https://firebasestorage.googleapis.com/v0/b/sparta-image.appspot.com/o/lecture%2Fmoney2.png?alt=media&to",
+   "desc":"‘평일 06:00-22:00 / 토요일 09:00-18:00 / 매달 2, 4번째 일요일 휴무 / 공휴일 휴무 / 주민등록상 수원 시민만 이용 가능",
+   "date":"경기 수원시 영통구 웰빙타운로 71"
+   },
+   {
+   "idx":5,
+   "category":"오늘의 배드민턴",
+   "title":"스포넷 스마트베뉴 용인점 ",
+   "image": "https://firebasestorage.googleapis.com/v0/b/sparta-image.appspot.com/o/lecture%2Fbattery.png?alt=media&t",
+   "desc": "평일 1시간(09~17시) 10,000원/1코트 / 평일 1시간(17~19시) 13,000원/1코트 / 평일 1시간(19~22시) 15,000원/1코트 / 주말 1시간 15,000원/1코트",
+   "date":"경기 용인시 처인구 중부대로 1022-2"
+   },
+   {
+   "idx":6,
+   "category":"오늘의 배드민턴",
+   "title":"동백실내배드민턴장",
+   "image": "https://firebasestorage.googleapis.com/v0/b/sparta-image.appspot.com/o/lecture%2Fpuppy.png?alt=media&to",
+   "desc":"평일, 토요일 06:00-22:00 / 일요일, 법정공휴일 06:00-21:00 / 주민등록상 중학생 이상의 용인 시민만 이용 가능",
+   "date":"경기 용인시 기흥구 동백동 589"
+   },
+   {
+   "idx":7,
+   "category":"오늘의 배드민턴",
+   "title":"처인배드민턴장",
+   "image": "https://firebasestorage.googleapis.com/v0/b/sparta-image.appspot.com/o/lecture%2Fpuppy2.png?alt=media&to",
+   "desc":"06:00-20:45 연중무휴 / 1회 입장 1,500원 / 1회 단체 입장 1,200원",
+   "date":"경기 용인시 처인구 동부로 142 "
+   },
+   {
+   "idx":8,
+   "category":"오늘의 배드민턴",
+   "title":"와이지 배드민턴장 ",
+   "image": "https://firebasestorage.googleapis.com/v0/b/sparta-image.appspot.com/o/lecture%2Frental.png?alt=media&to",
+   "desc":"평일 1코트 1시간 (06~19시) 15,000원 / 주말 1코트 1시간 (06~23시) 20,000원 / 공휴일 1코트 1시간 (06~19시) 20,000원 / 클럽대관 15,000원 / 심야새벽대관 15,000원",
+   "date":"경기 용인시 처인구 포곡읍 곡현로 89-222 나동"
+   }
+   ]
+   }
+   
