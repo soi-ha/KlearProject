@@ -4,11 +4,14 @@ import guksen from "../assets/guksen.jpg"
 import metan from "../assets/metan.png"
 import sponet from "../assets/sponet.jpg" 
 import map from "../assets/map.jpg" 
+import { StatusBar } from 'expo-status-bar';
 
 
 export default function App() {
 return (
 <ScrollView style={styles.container}>
+<StatusBar style="black" />
+
 <View style={styles.textContainer1}>   
 <Image
 source={sponet}

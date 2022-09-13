@@ -1,14 +1,12 @@
 import React,{useState,useEffect} from 'react';
-
 import main from '../assets/main.png';
-import sponet from '../assets/sponet.jpg';
-
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
 import data from '../data.json';
 import Card from '../components/Card';
 import Loading from '../components/Loading';
-export default function MainPage() {
-
+import { StatusBar } from 'expo-status-bar';
+export default function MainPage({navigation,route}) {
+console.disableYellowBox = true;
 //return 구문 밖에서는 슬래시 두개 방식으로 주석
 //기존 꿀팁을 저장하고 있을 상태
 const [state,setState] = useState([])
@@ -22,13 +20,18 @@ useEffect(()=>{
 //뒤의 1000 숫자는 1초를 뜻함
 //1초 뒤에 실행되는 코드들이 담겨 있는 함수
 setTimeout(()=>{
+//헤더의 타이틀 변경
+navigation.setOptions({
+title:'나만의 꿀팁'
+})
 //꿀팁 데이터로 모두 초기화 준비
 let tip = data.tip;
 setState(tip)
 setCateState(tip)
 setReady(false)
-},5000)
+},1000)
 },[])
+
 const category = (cate) => {
 if(cate == "전체보기"){
 //전체보기면 원래 꿀팁 데이터를 담고 있는 상태값으로 다시 초기화
@@ -48,11 +51,13 @@ return ready ? <Loading/> : (
 return 구문 안에서는 {슬래시 + * 방식으로 주석
 */
 <ScrollView style={styles.container}>
-<Text style={styles.title}>Klear Project</Text>
+<StatusBar style="black" />
+{/* <Text style={styles.title}>나만의 꿀팁</Text> */}
 <Text style={styles.weather}>오늘의 날씨: {todayWeather + '°C ' + todayCondition} </Text>
-<Image style={styles.mainImage} source={sponet}/>
+<Image style={styles.mainImage} source={main}/>
 <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
 <TouchableOpacity style={styles.middleButtonAll} onPress={()=>{category('오늘의 배드민턴')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
+<TouchableOpacity style={styles.middleButton01} onPress={()=>{category('오늘의 배드민턴')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
 <TouchableOpacity style={styles.middleButton01} onPress={()=>{category('클럽/동아리찾기')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
 
 </ScrollView>
@@ -60,18 +65,15 @@ return 구문 안에서는 {슬래시 + * 방식으로 주석
 {/* 하나의 카드 영역을 나타내는 View */}
 {
 cateState.map((content,i)=>{
-return (<Card content={content} key={i}/>)
-
+return (<Card content={content} key={i} navigation={navigation}/>)
 })
 }
-
 </View>
 </ScrollView>
 );
 }
 const styles = StyleSheet.create({
 container: {
-
 //앱의 배경 색
 backgroundColor: '#fff',
 },
@@ -91,11 +93,11 @@ paddingRight:20
 },
 mainImage: {
 //컨텐츠의 넓이 값
-width:'100%',
+width:'90%',
 //컨텐츠의 높이 값
 height:200,
 //컨텐츠의 모서리 구부리기
-borderRadius:0,
+borderRadius:10,
 marginTop:20,
 //컨텐츠 자체가 앱에서 어떤 곳에 위치시킬지 결정(정렬기능)
 //각 속성의 값들은 공식문서에 고대로~ 나와 있음
@@ -110,6 +112,7 @@ middleButtonAll: {
 width:100,
 height:50,
 padding:15,
+
 backgroundColor:"#20b2aa",
 borderColor:"deeppink",
 borderRadius:15,
@@ -130,10 +133,26 @@ height:50,
 padding:15,
 backgroundColor:"#fe8d6f",
 borderRadius:15,
-margin:7,
+margin:7
+},
+middleButton03: {
+width:100,
+height:50,
+padding:15,
+backgroundColor:"#9adbc5",
+borderRadius:15,
+margin:7
+},
+middleButton04: {
+width:100,
+height:50,
+padding:15,
+backgroundColor:"#f886a8",
+borderRadius:15,
+margin:7
 },
 middleButtonText: {
-fontcolor:"black",
+color:"#fff",
 fontWeight:"700",
 //텍스트의 현재 위치에서의 정렬
 textAlign:"center"
@@ -143,7 +162,6 @@ color:"#fff",
 fontWeight:"700",
 //텍스트의 현재 위치에서의 정렬
 textAlign:"center"
-
 },
 cardContainer: {
 marginTop:10,

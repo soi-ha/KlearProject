@@ -14,7 +14,7 @@ Alert.alert("팝업!!")
 }
 return (
 // ScrollView에서의 flex 숫자는 의미가 없습니다. 정확히 보여지는 화면을 몇등분 하지 않고
-// 화면에 넣은 컨텐츠를 모두 보여주려 스크롤 기능이 존재하기 때문입니다.
+// 화면에 넣은 컨텐츠를 모두 보여주려 스크 롤 기능이 존재하기 때문입니다.
 // 여기선 내부의 컨텐츠들 영역을 결정짓기 위해서 height 값과 margin,padding 값을 적절히 잘 이용해야 합니다.
 <ScrollView style={styles.container}>
 <Image style={styles.image} source={{uri:tip.image}}/>
