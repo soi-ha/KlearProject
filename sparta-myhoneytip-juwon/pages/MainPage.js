@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import main from '../assets/main.png';
+import sponet from '../assets/sponet.jpg';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
 import data from '../data.json';
 import Card from '../components/Card';
@@ -22,7 +22,7 @@ useEffect(()=>{
 setTimeout(()=>{
 //헤더의 타이틀 변경
 navigation.setOptions({
-title:'나만의 꿀팁'
+title:'Klear Project'
 })
 //꿀팁 데이터로 모두 초기화 준비
 let tip = data.tip;
@@ -54,11 +54,36 @@ return 구문 안에서는 {슬래시 + * 방식으로 주석
 <StatusBar style="black" />
 {/* <Text style={styles.title}>나만의 꿀팁</Text> */}
 <Text style={styles.weather}>오늘의 날씨: {todayWeather + '°C ' + todayCondition} </Text>
-<Image style={styles.mainImage} source={main}/>
+
+<ScrollView style={styles.menuContainer} horizontal indicatorStyle={"white"}>
+
+<TouchableOpacity style={styles.menuButton} onPress={()=>{navigation.navigate('MainPage')}}>
+<Text style={styles.menuButtonText}>홈</Text>
+</TouchableOpacity> 
+
+<TouchableOpacity style={styles.menuButton} onPress={()=>{navigation.navigate('MapPage')}}>
+<Text style={styles.menuButtonText}>지도</Text>
+</TouchableOpacity>
+
+<TouchableOpacity style={styles.menuButton} onPress={()=>{navigation.navigate('MainPage2')}}>
+<Text style={styles.menuButtonText}>피드</Text>
+</TouchableOpacity>
+
+<TouchableOpacity style={styles.menuButton} onPress={()=>{navigation.navigate('CalendarPage')}}>
+<Text style={styles.menuButtonText}>캘린더</Text>
+</TouchableOpacity>
+
+<TouchableOpacity style={styles.menuButton} onPress={()=>{navigation.navigate('ProfilePage')}}>
+<Text style={styles.menuButtonText}>프로필</Text>
+</TouchableOpacity>
+
+</ScrollView>
+
+<Image style={styles.mainImage} source={sponet}/>
 <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
-<TouchableOpacity style={styles.middleButtonAll} onPress={()=>{category('오늘의 배드민턴')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
-<TouchableOpacity style={styles.middleButton01} onPress={()=>{category('오늘의 배드민턴')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
-<TouchableOpacity style={styles.middleButton01} onPress={()=>{category('클럽/동아리찾기')}}><Text style={styles.middleButtonText}></Text></TouchableOpacity>
+
+<TouchableOpacity style={styles.middleButton01} onPress={()=>{category('오늘의 배드민턴')}}><Text style={styles.middleButtonText}>오늘의 배드민턴</Text></TouchableOpacity>
+<TouchableOpacity style={styles.middleButton01} onPress={()=>{category('클럽/동아리찾기')}}><Text style={styles.middleButtonText}>클럽/동아리찾기</Text></TouchableOpacity>
 
 </ScrollView>
 <View style={styles.cardContainer}>
@@ -119,40 +144,16 @@ borderRadius:15,
 margin:7
 },
 middleButton01: {
-width:100,
+width:160,
 height:50,
 padding:15,
-backgroundColor:"#fdc453",
-borderColor:"deeppink",
+backgroundColor:"lightgray",
 borderRadius:15,
 margin:7
 },
-middleButton02: {
-width:100,
-height:50,
-padding:15,
-backgroundColor:"#fe8d6f",
-borderRadius:15,
-margin:7
-},
-middleButton03: {
-width:100,
-height:50,
-padding:15,
-backgroundColor:"#9adbc5",
-borderRadius:15,
-margin:7
-},
-middleButton04: {
-width:100,
-height:50,
-padding:15,
-backgroundColor:"#f886a8",
-borderRadius:15,
-margin:7
-},
+
 middleButtonText: {
-color:"#fff",
+color:"black",
 fontWeight:"700",
 //텍스트의 현재 위치에서의 정렬
 textAlign:"center"
@@ -167,4 +168,18 @@ cardContainer: {
 marginTop:10,
 marginLeft:10
 },
+menuContainer:{
+    borderWidth:1,
+    width:400,
+    height:60,
+},
+menuButton:{
+    borderWidth:1,
+    padding:10,
+    
+
+},
+menuButtonText:{
+    fontSize:29,
+}
 });
