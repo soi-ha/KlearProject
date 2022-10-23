@@ -46,6 +46,7 @@ let todayWeather = 10 + 17;
 let todayCondition = "흐림"
 
 return ready ? <Loading/> : (
+
 <ScrollView stickyHeaderIndices={[2]} style={styles.container}>
 <StatusBar style="black" />
 
