@@ -44,15 +44,11 @@ return d.category == cate
 }
 let todayWeather = 10 + 17;
 let todayCondition = "흐림"
-//처음 ready 상태값은 true 이므로 ? 물음표 바로 뒤에 값이 반환(그려짐)됨
-//useEffect로 인해 데이터가 준비되고, ready 값이 변경되면 : 콜론 뒤의 값이 반환(그려짐)
+
 return ready ? <Loading/> : (
-/*
-return 구문 안에서는 {슬래시 + * 방식으로 주석
-*/
-<ScrollView style={styles.container}>
+<ScrollView stickyHeaderIndices={[2]} style={styles.container}>
 <StatusBar style="black" />
-{/* <Text style={styles.title}>나만의 꿀팁</Text> */}
+
 <Text style={styles.weather}>오늘의 날씨: {todayWeather + '°C ' + todayCondition} </Text>
 
 <ScrollView style={styles.menuContainer} horizontal indicatorStyle={"white"}>
@@ -100,7 +96,7 @@ return (<Card content={content} key={i} navigation={navigation}/>)
 const styles = StyleSheet.create({
 container: {
 //앱의 배경 색
-backgroundColor: '#fff',
+backgroundColor: 'white',
 },
 title: {
 //폰트 사이즈
@@ -123,7 +119,7 @@ width:'90%',
 height:200,
 //컨텐츠의 모서리 구부리기
 borderRadius:10,
-marginTop:20,
+marginTop:10,
 //컨텐츠 자체가 앱에서 어떤 곳에 위치시킬지 결정(정렬기능)
 //각 속성의 값들은 공식문서에 고대로~ 나와 있음
 alignSelf:"center"
@@ -149,7 +145,7 @@ height:50,
 padding:15,
 backgroundColor:"lightgray",
 borderRadius:15,
-margin:7
+margin:7, 
 },
 
 middleButtonText: {
@@ -169,17 +165,21 @@ marginTop:10,
 marginLeft:10
 },
 menuContainer:{
-    borderWidth:1,
+    marginTop: 10,
     width:400,
     height:60,
+    backgroundColor : 'lightgray',
 },
 menuButton:{
-    borderWidth:1,
-    padding:10,
-    
-
+    // width:60,
+    // height:50,
+    backgroundColor:"#18D5FF",
+    borderRadius:15,
+    margin:8,
+    padding: .5
 },
 menuButtonText:{
-    fontSize:29,
+    fontSize:15,
+    padding: 15
 }
 });

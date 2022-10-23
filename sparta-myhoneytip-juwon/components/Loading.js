@@ -6,7 +6,7 @@ return(<View style={styles.container}><Image
     source={klearicon}
     resizeMode={"contain"}
     style={styles.imageStyle1}/>
-    <Text style={styles.title}>"강주원짱멋있음"</Text></View>)
+    <Text style={styles.title}>"히칭"</Text></View>)
 }
 const styles = StyleSheet.create({
 container: {
@@ -19,6 +19,7 @@ backgroundColor: '#fdc453',
 imageStyle1:{
   width:300,
   height:200,
+  borderRadius :30,
 },
 title: {
 fontSize:20,

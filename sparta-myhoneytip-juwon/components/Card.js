@@ -19,7 +19,7 @@ card:{
 flex:2,
 flexDirection:"row",
 margin:10,
-borderBottomWidth:0.5,
+borderBottomWidth:0.5, 
 borderBottomColor:"#eee",
 paddingBottom:10
 
