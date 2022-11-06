@@ -42,7 +42,7 @@ return d.category == cate
 }))
 }
 }
-let todayWeather = 10 + 17;
+let todayWeather = 5;
 let todayCondition = "흐림"
 
 return ready ? <Loading/> : (
