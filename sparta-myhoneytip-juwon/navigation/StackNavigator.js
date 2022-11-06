@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import DetailPage from '../pages/DetailPage';
 import MainPage from '../pages/MainPage';
 import MapPage from '../pages/MapPage';
-import PidPage from '../pages/PidPage';
+import FeedPage from '../pages/FeedPage';
 import CalendarPage from '../pages/CalendarPage';
 import ProfilePage from '../pages/ProfilePage';
 
@@ -31,7 +31,7 @@ headerBackTitleVisible: false
 <Stack.Screen name="MainPage" component={MainPage}/>
 <Stack.Screen name="DetailPage" component={DetailPage}/>
 <Stack.Screen name="MapPage" component={MapPage}/>
-<Stack.Screen name="PidPage" component={PidPage}/>
+<Stack.Screen name="FeedPage" component={FeedPage}/>
 <Stack.Screen name="CalendarPage" component={CalendarPage}/>
 <Stack.Screen name="ProfilePage" component={ProfilePage}/>
 </Stack.Navigator>

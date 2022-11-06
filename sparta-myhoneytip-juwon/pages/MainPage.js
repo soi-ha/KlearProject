@@ -62,7 +62,7 @@ return ready ? <Loading/> : (
 <Text style={styles.menuButtonText}>지도</Text>
 </TouchableOpacity>
 
-<TouchableOpacity style={styles.menuButton} onPress={()=>{navigation.navigate('MainPage2')}}>
+<TouchableOpacity style={styles.menuButton} onPress={()=>{navigation.navigate('FeedPage')}}>
 <Text style={styles.menuButtonText}>피드</Text>
 </TouchableOpacity>
 
